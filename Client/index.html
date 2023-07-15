@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+
+  <title>Property Beacon</title>
+</head>
+
+<body>
+    <div class="img"></div>
+    <h1>Property Beacon</h1>
+    <section class="prediction">
+        <form class="form">
+            <h2>Rooms</h2>
+            <div class="switch-field">
+                <input type="radio" id="radio-room-1" name="uiRooms" value="1"/>
+                <label for="radio-room-1">1</label>
+                <input type="radio" id="radio-room-2" name="uiRooms" value="2" checked/>
+                <label for="radio-room-2">2</label>
+                <input type="radio" id="radio-room-3" name="uiRooms" value="3"/>
+                <label for="radio-room-3">3</label>
+                <input type="radio" id="radio-room-4" name="uiRooms" value="4"/>
+                <label for="radio-room-4">4</label>
+                <input type="radio" id="radio-room-5" name="uiRooms" value="5"/>
+                <label for="radio-room-5">5</label>
+            </div>
+            <h2>Distance To CBD in (Miles)</h2>
+            <input class="Distance"  type="text" id="uiDistance" class="floatLabel" name="Distance" value="2.0">
+        </form>
+        <form class="form">
+            <h2>Bathrooms</h2>
+            <div class="switch-field">
+                <input type="radio" id="radio-bathroom-1" name="uiBathrooms" value="1"/>
+                <label for="radio-bathroom-1">1</label>
+                <input type="radio" id="radio-bathroom-2" name="uiBathrooms" value="2" checked/>
+                <label for="radio-bathroom-2">2</label>
+                <input type="radio" id="radio-bathroom-3" name="uiBathrooms" value="3"/>
+                <label for="radio-bathroom-3">3</label>
+                <input type="radio" id="radio-bathroom-4" name="uiBathrooms" value="4"/>
+                <label for="radio-bathroom-4">4</label>
+                <input type="radio" id="radio-bathroom-5" name="uiBathrooms" value="5"/>
+                <label for="radio-bathroom-5">5</label>
+            </div>
+        </form>
+        <form class="form">
+            <h2>Car Spaces</h2>
+            <div class="switch-field">
+                <input type="radio" id="radio-car-1" name="uiCar" value="1"/>
+                <label for="radio-car-1">1</label>
+                <input type="radio" id="radio-car-2" name="uiCar" value="2" checked/>
+                <label for="radio-car-2">2</label>
+                <input type="radio" id="radio-car-3" name="uiCar" value="3"/>
+                <label for="radio-car-3">3</label>
+                <input type="radio" id="radio-car-4" name="uiCar" value="4"/>
+                <label for="radio-car-4">4</label>
+            </div>
+            <h2>Landsize (Sqaure Feet)</h2>
+            <input class="Landsize"  type="text" id="uiLandsize" class="floatLabel" name="Landsize" value="200.0">
+            <h2>Suburb</h2>
+            <div>
+                <select class="suburb" name="" id="uiSuburbs">
+                <option value="" disabled="disabled" selected="selected">Choose a Suburb</option>
+                </select>
+            </div>
+            <h2>Property Type</h2>
+            <div>
+                <select class="type" name="" id="uiType">
+                <option value="" disabled="disabled" selected="selected">Choose a Type</option>
+                </select>
+            </div>
+            <h2>Region</h2>
+            <div>
+                <select class="Region" name="" id="uiRegion">
+                <option value="" disabled="disabled" selected="selected">Choose a Region</option>
+                </select>
+            </div>
+            <button class="submit" onclick="onClickedEstimatePrice()" type="button">Predict Price</button>
+            <div id="uiPredictPrice" class="result">	
+                <h2></h2> 
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
